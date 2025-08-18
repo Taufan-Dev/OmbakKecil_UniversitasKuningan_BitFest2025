@@ -81,7 +81,7 @@ export default function Navbar() {
             <input
               type="text"
               placeholder="Cari..."
-              className="border rounded-full pl-10 pr-4 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border rounded-lg pl-10 pr-4 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <Search
               size={18}

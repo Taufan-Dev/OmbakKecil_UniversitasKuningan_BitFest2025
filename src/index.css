@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --font-primary: "Montserrat", sans-serif;
+  --font-sekunder: "Outfit", sans-serif;
+  --font-thrird: "Water Brush", cursive;
+}

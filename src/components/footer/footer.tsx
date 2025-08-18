@@ -9,7 +9,7 @@ export default function Footer() {
   const footer: FooterType = data.footer;
 
   return (
-    <footer className="relative my-10 md:px-20 px-10">
+    <footer className="relative my-10 md:px-10 px-5">
       <div className="container mx-auto px-4">
         {/* Grid 2 kolom untuk kiri-kanan */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

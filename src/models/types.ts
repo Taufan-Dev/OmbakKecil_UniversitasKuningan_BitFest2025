@@ -1,5 +1,8 @@
 export interface Footer {
-  address: string[];
+  address: {
+    id: string;
+    en: string;
+  }[];
   links: {
     label: {
       id: string;

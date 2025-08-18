@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "../../data/lang.json"; // sementara ambil JSON ID dulu
+import data from "../../data/lang.json";
 import type { Footer as FooterType } from "../../models/types";
 
 type Language = "id" | "en";
@@ -9,26 +9,28 @@ export default function Footer() {
   const footer: FooterType = data.footer;
 
   return (
-    <footer className="relative pt-8 pb-6 mt-10">
+    <footer className="relative my-10 md:px-20 px-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap">
+        {/* Grid 2 kolom untuk kiri-kanan */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left */}
-          <div className="w-full lg:w-6/12 px-4 mb-10 lg:mb-0">
+          <div>
             <img src="/logo/logo.png" alt="Logo" className="mb-5 w-44" />
             <p className="text-sm text-gray-600">
               {footer.address.map((line, idx) => (
                 <span key={idx}>
-                  {line} <br />
+                  {line[language]} <br />
                 </span>
               ))}
             </p>
           </div>
 
           {/* Right */}
-          <div className="w-full lg:w-6/12 px-4">
-            <div className="flex flex-wrap items-top mb-6">
+          <div>
+            {/* Grid 3 kolom untuk links, policies, contacts */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {/* Links */}
-              <div className="w-full lg:w-4/12 mb-10 lg:mb-0">
+              <div>
                 <ul>
                   {footer.links.map((link, idx) => (
                     <li key={idx}>
@@ -44,7 +46,7 @@ export default function Footer() {
               </div>
 
               {/* Policies */}
-              <div className="w-full lg:w-4/12 mb-10 lg:mb-0">
+              <div>
                 <ul>
                   {footer.policies.map((policy, idx) => (
                     <li key={idx}>
@@ -59,8 +61,8 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Contacts */}
-              <div className="w-full lg:w-4/12 mb-10 lg:mb-0">
+              {/* Contacts + Language Switch */}
+              <div>
                 <ul>
                   {footer.contacts.map((contact, idx) => (
                     <li key={idx}>
@@ -73,55 +75,57 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex justify-center mt-4 gap-2">
-                  {/* Bahasa Indonesia */}
-                  <button
-                    onClick={() => {
-                      setLanguage("id");
-                      window.scrollTo(0, 0);
-                    }}
-                    className={`rounded-full ${
-                      language === "id" ? "border-4 border-primary" : ""
-                    }`}
-                  >
-                    <img
-                      src="/logo/id.svg"
-                      alt="Indonesian flag"
-                      width={35}
-                      height={35}
-                    />
-                  </button>
 
-                  {/* Bahasa Inggris */}
-                  <button
-                    onClick={() => {
-                      setLanguage("en");
-                      window.scrollTo(0, 0);
-                    }}
-                    className={`rounded-full ${
-                      language === "en" ? "border-4 border-primary" : ""
-                    }`}
-                  >
-                    <img
-                      src="/logo/us.svg"
-                      alt="US flag"
-                      width={35}
-                      height={35}
-                    />
-                  </button>
+                <div className="mt-4 bg-gray-100 p-4 rounded-lg">
+                  <h2 className="text-sm font-semibold mb-2">Ubah Bahasa</h2>
+                  <div className="flex gap-2">
+                    {/* Bahasa Indonesia */}
+                    <button
+                      onClick={() => {
+                        setLanguage("id");
+                        window.scrollTo(0, 0);
+                      }}
+                      className={`rounded-full ${
+                        language === "id" ? "border-4 border-blue-500" : ""
+                      }`}
+                    >
+                      <img
+                        src="/logo/id.svg"
+                        alt="Indonesian flag"
+                        width={35}
+                        height={35}
+                      />
+                    </button>
+
+                    {/* Bahasa Inggris */}
+                    <button
+                      onClick={() => {
+                        setLanguage("en");
+                        window.scrollTo(0, 0);
+                      }}
+                      className={`rounded-full ${
+                        language === "en" ? "border-4 border-blue-500" : ""
+                      }`}
+                    >
+                      <img
+                        src="/logo/us.svg"
+                        alt="US flag"
+                        width={35}
+                        height={35}
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="my-6 border-gray-300" />
+        <hr className="my-6 border-blue-500 lg:mx-44" />
 
-        <div className="flex flex-wrap items-center md:justify-between justify-center">
-          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm text-gray-500 py-1">
-              {footer.copyright[language]}
-            </div>
+        <div className="text-center">
+          <div className="text-sm text-gray-500 py-1">
+            {footer.copyright[language]}
           </div>
         </div>
       </div>

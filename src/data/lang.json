@@ -1,27 +1,45 @@
 {
   "footer": {
     "address": [
-      "Universitas Kuningan",
-      "Kampus 2 Jl. Pramuka No.67",
-      "Kuningan - Jawa Barat"
+      {
+        "id": "Universitas Catur Insan Cendekia",
+        "en": "Catur Insan Cendekia University"
+      },
+      {
+        "id": "Jl. Kesambi No. 202 Kesambi",
+        "en": "Kesambi Street No. 202, Kesambi"
+      },
+      {
+        "id": "Cirebon - Jawa Barat",
+        "en": "Cirebon - West Java"
+      }
     ],
     "links": [
       { "label": { "id": "Beranda", "en": "Home" }, "url": "/" },
       { "label": { "id": "Fitur", "en": "Features" }, "url": "/features" },
       { "label": { "id": "Harga", "en": "Pricing" }, "url": "/pricing" },
-      { "label": { "id": "Kontak Kami", "en": "Contact Us" }, "url": "/contact" }
+      {
+        "label": { "id": "Kontak Kami", "en": "Contact Us" },
+        "url": "/contact"
+      }
     ],
     "policies": [
-      { "label": { "id": "Syarat Layanan", "en": "Terms of Services" }, "url": "/tos" },
-      { "label": { "id": "Kebijakan Privasi", "en": "Privacy Policy" }, "url": "/privacy" }
+      {
+        "label": { "id": "Syarat Layanan", "en": "Terms of Services" },
+        "url": "/tos"
+      },
+      {
+        "label": { "id": "Kebijakan Privasi", "en": "Privacy Policy" },
+        "url": "/privacy"
+      }
     ],
     "contacts": [
-      { "label": "support@marketmind.con", "url": "mailto:support@marketmind.con" },
-      { "label": "+62 890 1234 2702", "url": "tel:+6289012342702" }
+      { "label": "info @ cic.ac.id", "url": "info @ cic.ac.id" },
+      { "label": "+62231-200418", "url": "+62231-200418" }
     ],
     "copyright": {
-      "id": "Hak Cipta © 2025 TEAM TR - UNIVERSITAS KUNINGAN",
-      "en": "Copyright © 2025 TEAM TR - UNIVERSITAS KUNINGAN"
+      "id": "Hak Cipta © 2025 TEAM Ombak Laut - UNIVERSITAS KUNINGAN",
+      "en": "Copyright © 2025 TEAM Ombak Laut - UNIVERSITAS KUNINGAN"
     }
   }
 }

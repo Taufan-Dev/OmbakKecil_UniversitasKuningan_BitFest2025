@@ -1,4 +1,6 @@
-# Website Kampus
+# OMBAK KECIL_UNIVERSITAS KUNINGAN_ BitFest2025
+
+Link Hosting: https://ombakkecil-universitaskuningan-bitf.vercel.app/
 
 Website ini adalah platform modern untuk menampilkan informasi kampus, seperti profil, program studi, prestasi, dan berita terbaru.  
 Website ini didesain responsif agar nyaman diakses melalui desktop maupun perangkat mobile.
@@ -30,6 +32,6 @@ Ikuti langkah-langkah berikut setelah nge-clone repository:
 1. **Clone repository**
 
 ```bash
-git clone https://github.com/username/nama-repo.git
+git clone "https://github.com/Taufan-Dev/OmbakKecil_UniversitasKuningan_BitFest2025.git"
 cd nama-repo
 npm install

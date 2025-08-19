@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# OMBAK KECIL_UNIVERSITAS KUNINGAN_ BitFest2025
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Link Hosting: https://ombakkecil-universitaskuningan-bitf.vercel.app/
 
-Currently, two official plugins are available:
+Website ini adalah platform modern untuk menampilkan informasi kampus, seperti profil, program studi, prestasi, dan berita terbaru.  
+Website ini didesain responsif agar nyaman diakses melalui desktop maupun perangkat mobile.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Salah satu fitur unggulannya adalah **multi-language support**, sehingga pengguna dapat memilih bahasa Indonesia atau Inggris sesuai kebutuhan.
 
-## Expanding the ESLint configuration
+Dibangun dengan teknologi modern untuk performa dan pengalaman pengembangan yang cepat.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Teknologi yang Digunakan
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) untuk build cepat
+- [Tailwind CSS](https://tailwindcss.com/) untuk desain responsif
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Fitur Utama
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Multi-language (ID & EN)
+  <img width="172" height="88" alt="image" src="https://github.com/user-attachments/assets/c9a90774-2e67-41a3-8109-b08ff0e489ec" />
+- Responsive design untuk desktop, tablet, dan mobile
+- Navigasi interaktif
+- Halaman informasi kampus lengkap
+
+## Cara Install dan Jalankan Project
+
+Ikuti langkah-langkah berikut setelah nge-clone repository:
+
+1. **Clone repository**
+
+```bash
+git clone "https://github.com/Taufan-Dev/OmbakKecil_UniversitasKuningan_BitFest2025.git"
+cd nama-repo
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Jika Ada Pertanyaan Lebih lanjut atau ada Kesalahan dalam Penginstalan Hubungi (+62 896-3408-3483) Taufan

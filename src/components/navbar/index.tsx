@@ -10,8 +10,8 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
-      <div className="container mx-auto px-10  flex items-center justify-between">
+    <nav className="backdrop-blur-md bg-white/70 shadow-md fixed w-full top-0 left-0 z-50 transition-colors duration-300">
+      <div className="container mx-auto px-10 flex items-center justify-between">
         {/* Logo */}
         <img
           src="/logo/logo.png"
@@ -21,13 +21,13 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
 
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-6">
-          <a href="#" className="hover:text-blue-500">
+          <a href="#" className="hover:text-blue-500 transition">
             Home
           </a>
-          <a href="#" className="hover:text-blue-500">
+          <a href="#" className="hover:text-blue-500 transition">
             About
           </a>
-          <a href="#" className="hover:text-blue-500">
+          <a href="#" className="hover:text-blue-500 transition">
             Contact
           </a>
 
@@ -75,7 +75,7 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 pb-4 shadow">
+        <div className="md:hidden bg-white/90 backdrop-blur-md px-4 pb-4 shadow transition">
           <a href="#" className="block py-2 hover:text-blue-500">
             Home
           </a>

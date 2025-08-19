@@ -33,6 +33,7 @@ Ikuti langkah-langkah berikut setelah nge-clone repository:
 git clone "https://github.com/Taufan-Dev/OmbakKecil_UniversitasKuningan_BitFest2025.git"
 cd nama-repo
 npm install
+```
 
 
 Jika Ada Pertanyaan Lebih lanjut atau ada Kesalahan dalam Penginstalan Hubungi (+62 896-3408-3483) Taufan

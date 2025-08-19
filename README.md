@@ -14,13 +14,11 @@ Dibangun dengan teknologi modern untuk performa dan pengalaman pengembangan yang
 - [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/) untuk build cepat
 - [Tailwind CSS](https://tailwindcss.com/) untuk desain responsif
-- [React Router](https://reactrouter.com/) untuk navigasi
-- [i18next](https://www.i18next.com/) untuk multi-language support
-- [ESLint](https://eslint.org/) + plugin React untuk code quality
 
 ## Fitur Utama
 
 - Multi-language (ID & EN)
+  <img width="172" height="88" alt="image" src="https://github.com/user-attachments/assets/c9a90774-2e67-41a3-8109-b08ff0e489ec" />
 - Responsive design untuk desktop, tablet, dan mobile
 - Navigasi interaktif
 - Halaman informasi kampus lengkap
@@ -35,3 +33,6 @@ Ikuti langkah-langkah berikut setelah nge-clone repository:
 git clone "https://github.com/Taufan-Dev/OmbakKecil_UniversitasKuningan_BitFest2025.git"
 cd nama-repo
 npm install
+
+
+Jika Ada Pertanyaan Lebih lanjut atau ada Kesalahan dalam Penginstalan Hubungi (+62 896-3408-3483) Taufan

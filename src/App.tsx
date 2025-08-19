@@ -8,6 +8,7 @@ import ArticleSection from "./sections/article";
 import AdmissionSection from "./sections/admission";
 import PartnersSesction from "./sections/partner";
 import PrestasiSecton from "./sections/prestasi";
+import Fakultas from "./components/fakultas/Categories";
 import "./App.css";
 
 type Language = "id" | "en";
@@ -25,11 +26,9 @@ export default function App() {
       {/* Navbar selalu di atas */}
       <Navbar language={language} setLanguage={setLanguage} />
 
-      {/* Wrapper untuk Header + Info */}
-      <section className="relative overflow-hidden">
-        <HeaderSection language={language} />
-        <InfoSection language={language} />
-      </section>
+      <HeaderSection language={language} />
+      <InfoSection language={language} />
+      <Fakultas language={language} />
       <ArticleSection language={language} />
       <PrestasiSecton language={language} />
       <PartnersSesction language={language} />

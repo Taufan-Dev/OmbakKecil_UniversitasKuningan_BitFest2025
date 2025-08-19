@@ -32,3 +32,4 @@ Ikuti langkah-langkah berikut setelah nge-clone repository:
 ```bash
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
+npm install

@@ -1,13 +1,30 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+type Language = "id" | "en";
+
 type NavbarProps = {
-  language: "id" | "en";
-  setLanguage: (lang: "id" | "en") => void;
+  language: Language;
+  setLanguage: (lang: Language) => void;
+};
+
+const translations = {
+  id: {
+    home: "Beranda",
+    article: "Artikel",
+    register: "Pendaftaran",
+  },
+  en: {
+    home: "Home",
+    article: "Articles",
+    register: "Register",
+  },
 };
 
 export default function Navbar({ language, setLanguage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const t = translations[language];
 
   return (
     <nav className="backdrop-blur-md bg-white/70 shadow-md fixed w-full top-0 left-0 z-50 transition-colors duration-300">
@@ -20,16 +37,20 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
         />
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex items-center gap-6">
-          <a href="#" className="hover:text-blue-500 transition">
-            Home
-          </a>
-          <a href="#" className="hover:text-blue-500 transition">
-            About
-          </a>
-          <a href="#" className="hover:text-blue-500 transition">
-            Contact
-          </a>
+        <div className="hidden md:flex items-center gap-8">
+          {[
+            { href: "#", label: t.home },
+            { href: "#", label: t.article },
+            { href: "#", label: t.register },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              className="relative font-medium text-gray-700 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-500"
+            >
+              {item.label}
+            </a>
+          ))}
 
           {/* Language Switcher Desktop */}
           <div className="flex gap-3">
@@ -38,7 +59,7 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
                 setLanguage("id");
                 window.scrollTo(0, 0);
               }}
-              className={`rounded-full ${
+              className={`rounded-full transition ${
                 language === "id" ? "border-4 border-blue-500" : ""
               }`}
             >
@@ -55,7 +76,7 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
                 setLanguage("en");
                 window.scrollTo(0, 0);
               }}
-              className={`rounded-full ${
+              className={`rounded-full transition ${
                 language === "en" ? "border-4 border-blue-500" : ""
               }`}
             >
@@ -76,15 +97,19 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white/90 backdrop-blur-md px-4 pb-4 shadow transition">
-          <a href="#" className="block py-2 hover:text-blue-500">
-            Home
-          </a>
-          <a href="#" className="block py-2 hover:text-blue-500">
-            About
-          </a>
-          <a href="#" className="block py-2 hover:text-blue-500">
-            Contact
-          </a>
+          {[
+            { href: "#", label: t.home },
+            { href: "#", label: t.article },
+            { href: "#", label: t.register },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              className="block py-2 relative font-medium text-gray-700 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full hover:text-blue-500"
+            >
+              {item.label}
+            </a>
+          ))}
 
           {/* Language Switcher Mobile */}
           <div className="mt-4 flex gap-4">
@@ -93,7 +118,7 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
                 setLanguage("id");
                 window.scrollTo(0, 0);
               }}
-              className={`rounded-full ${
+              className={`rounded-full transition ${
                 language === "id" ? "border-4 border-blue-500" : ""
               }`}
             >
@@ -110,7 +135,7 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
                 setLanguage("en");
                 window.scrollTo(0, 0);
               }}
-              className={`rounded-full ${
+              className={`rounded-full transition ${
                 language === "en" ? "border-4 border-blue-500" : ""
               }`}
             >

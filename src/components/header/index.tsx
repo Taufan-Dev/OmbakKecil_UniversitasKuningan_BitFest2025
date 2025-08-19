@@ -10,11 +10,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // Ganti dengan gambar kamu sendiri
-import image1 from "/header/1.jpg";
-import image2 from "/header/1.jpg";
-import image3 from "/header/1.jpg";
-import image4 from "/header/1.jpg";
-import image5 from "/header/1.jpg";
+import image1 from "/header/2.jpeg";
+import image2 from "/header/3.png";
+import image3 from "/header/4.jpg";
+import image4 from "/header/5.jpg";
+import image5 from "/header/6.jpg";
 
 interface Slide {
   name: string;
@@ -22,11 +22,11 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { name: "Facility", src: image1 },
-  { name: "Japan", src: image2 },
-  { name: "Scotland", src: image3 },
-  { name: "Norway", src: image4 },
-  { name: "France", src: image5 },
+  { name: "Fasilitas", src: image1 },
+  { name: "Pengajar", src: image2 },
+  { name: "Kurikulum", src: image3 },
+  { name: "Prestasi", src: image4 },
+  { name: "UKM", src: image5 },
 ];
 
 const Carousel3: FC = () => {

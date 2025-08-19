@@ -16,8 +16,8 @@
     ],
     "links": [
       { "label": { "id": "Beranda", "en": "Home" }, "url": "/" },
-      { "label": { "id": "Fitur", "en": "Features" }, "url": "/features" },
-      { "label": { "id": "Harga", "en": "Pricing" }, "url": "/pricing" },
+      { "label": { "id": "Artikel", "en": "Articles" }, "url": "/features" },
+      { "label": { "id": "Pendaftaran", "en": "Register" }, "url": "/pricing" },
       {
         "label": { "id": "Kontak Kami", "en": "Contact Us" },
         "url": "/contact"

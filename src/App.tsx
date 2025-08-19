@@ -5,6 +5,9 @@ import Footer from "./components/footer/footer";
 import HeaderSection from "./sections/header";
 import InfoSection from "./sections/info";
 import ArticleSection from "./sections/article";
+import AdmissionSection from "./sections/admission";
+import PartnersSesction from "./sections/partner";
+import PrestasiSecton from "./sections/prestasi";
 import "./App.css";
 
 type Language = "id" | "en";
@@ -26,17 +29,13 @@ export default function App() {
       <section className="relative overflow-hidden">
         <HeaderSection language={language} />
         <InfoSection language={language} />
-        <div
-          className="hidden md:block absolute -bottom-32 right-0 w-[500px] h-[500px] 
-  bg-gradient-to-tl from-blue-500/70 to-transparent 
-  rounded-tl-full z-0"
-        />
-
-        {/* Gradient Lingkaran Kanan Bawah */}
       </section>
-        <ArticleSection />
+      <ArticleSection language={language} />
+      <PrestasiSecton language={language} />
+      <PartnersSesction language={language} />
+      <AdmissionSection language={language} />
 
-      {/* Footer di bawah, tidak kena gradient */}
+      {/* Footer selalu di bawah */}
       <Footer language={language} setLanguage={setLanguage} />
     </main>
   );

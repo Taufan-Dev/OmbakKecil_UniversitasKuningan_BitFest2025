@@ -1,17 +1,19 @@
-import { useState } from "react";
 import data from "../../data/lang.json";
 import type { Footer as FooterType } from "../../models/types";
 
 type Language = "id" | "en";
 
-export default function Footer() {
-  const [language, setLanguage] = useState<Language>("id");
+type FooterProps = {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+};
+
+export default function Footer({ language, setLanguage }: FooterProps) {
   const footer: FooterType = data.footer;
 
   return (
-    <footer className="relative my-10 md:px-10 px-5">
+    <footer className="relative  my-10 md:px-10 px-5">
       <div className="container mx-auto px-4">
-        {/* Grid 2 kolom untuk kiri-kanan */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left */}
           <div>
@@ -27,7 +29,6 @@ export default function Footer() {
 
           {/* Right */}
           <div>
-            {/* Grid 3 kolom untuk links, policies, contacts */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {/* Links */}
               <div>
@@ -79,12 +80,8 @@ export default function Footer() {
                 <div className="mt-4 bg-gray-100 p-4 rounded-lg">
                   <h2 className="text-sm font-semibold mb-2">Ubah Bahasa</h2>
                   <div className="flex gap-2">
-                    {/* Bahasa Indonesia */}
                     <button
-                      onClick={() => {
-                        setLanguage("id");
-                        window.scrollTo(0, 0);
-                      }}
+                      onClick={() => setLanguage("id")}
                       className={`rounded-full ${
                         language === "id" ? "border-4 border-blue-500" : ""
                       }`}
@@ -97,12 +94,8 @@ export default function Footer() {
                       />
                     </button>
 
-                    {/* Bahasa Inggris */}
                     <button
-                      onClick={() => {
-                        setLanguage("en");
-                        window.scrollTo(0, 0);
-                      }}
+                      onClick={() => setLanguage("en")}
                       className={`rounded-full ${
                         language === "en" ? "border-4 border-blue-500" : ""
                       }`}

@@ -4,7 +4,6 @@ import "./Categories.css";
 
 import {
   FaCode,
-  FaNetworkWired,
   FaPalette,
   FaTasks,
   FaCalculator,
